@@ -1,6 +1,7 @@
 *.iml
 resources/error.log
 resources/*.iml
+src/.env
 src/*.iml
 src/__pycache__/*
 .idea
