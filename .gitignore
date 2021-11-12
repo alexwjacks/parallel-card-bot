@@ -1,0 +1,6 @@
+*.iml
+resources/error.log
+resources/*.iml
+src/*.iml
+src/__pycache__/*
+.idea
