@@ -327,5 +327,12 @@
     "Rarity": "Rare",
     "Type": "Effect",
     "Function": "Waste Target Unit or Relic"
+  },
+  {
+    "Card Name": "Infused Core",
+    "Parallel": "Universal",
+    "Rarity": "Rare",
+    "Type": "Relic",
+    "Function": "Place a Banked card face up under this Relic. That card produces 2 energy each turn. If this Relic is destroyed or removed, Waste the Card underneath. When this Relic is Wasted, lose 4 Life."
  }
 ]
