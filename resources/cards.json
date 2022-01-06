@@ -320,5 +320,12 @@
    "Rarity": "Rare",
    "Type": "Relic",
    "Function": "You no longer draw cards at the start of your turn or at the end of your turn if you Banked a card. Instead, Draw one random card from either your Deck, or Singularity whenever an Effect is played by either Player."
+  },
+  {
+    "Card Name": "Annihilate",
+    "Parallel": "Universal",
+    "Rarity": "Rare",
+    "Type": "Effect",
+    "Function": "Waste Target Unit or Relic"
  }
 ]
