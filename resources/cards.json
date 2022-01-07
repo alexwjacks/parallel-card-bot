@@ -63,6 +63,13 @@
    "Function": "At the start of your turn, instead of drawing a card, look at the top 3 cards, put one in your hand, and the other two on the bottom of your deck in a random order."
  },
  {
+   "Card Name": "Amperage",
+   "Parallel": "Augencore",
+   "Rarity": "Rare",
+   "Type": "Upgrade",
+   "Function": "When the upgraded unit dies, deal 1 damage to all enemy units. Then, bank this upgrade instead of wasting it."
+ },
+ {
    "Card Name": "Foundry Technician",
    "Parallel": "Augencore",
    "Rarity": "Uncommon",
