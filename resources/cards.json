@@ -341,5 +341,96 @@
     "Rarity": "Rare",
     "Type": "Relic",
     "Function": "Place a Banked card face up under this Relic. That card produces 2 energy each turn. If this Relic is destroyed or removed, Waste the Card underneath. When this Relic is Wasted, lose 4 Life."
+  },
+  {
+    "Card Name": "Overclock Key",
+    "Parallel": "N/A",
+    "Rarity": "Asset",
+    "Type": "Keyframing",
+    "Function": "When utilized in Key Framing, the Overclock Key handsomely rewards win streaks with bonus Prime tokens."
+ },
+{
+  "Card Name": "Reclamator",
+  "Parallel": "Augencore",
+  "Rarity": "Rare",
+  "Type": "Relic",
+  "Function": "Whenever a Unit is wasted, gain 1 temporary energy to be used this turn only. If this Relic is Banked, gain 1 extra energy this turn."
+},
+{
+  "Card Name": "Ocular Implant",
+  "Parallel": "Augencore",
+  "Rarity": "Common",
+  "Type": "Upgrade",
+  "Function": "When Upgraded Unit attacks, draw a card."
+},
+{
+  "Card Name": "Battle-Hardened Warrior",
+  "Parallel": "Earthen",
+  "Rarity": "Uncommon",
+  "Type": "Unit",
+  "Function": "Whenever this unit is healed it gains attack equal to the life restored."
+},
+{
+  "Card Name": "Interrogation Tools",
+  "Parallel": "Marcolian",
+  "Rarity": "Common",
+  "Type": "Relic",
+  "Function": "Once per turn, whenever a source would deal damage to the enemy, negate that damage and force them to reveal a banked card instead."
+},
+{
+  "Card Name": "Repurposed Hardware",
+  "Parallel": "Marcolian",
+  "Rarity": "Uncommon",
+  "Type": "Effect",
+  "Function": "Put any card on the field into the Enemy's bank."
+},
+{
+  "Card Name": "Strength of Mars",
+  "Parallel": "Marcolian",
+  "Rarity": "Uncommon",
+  "Type": "Upgrade",
+  "Function": "Whenever you are dealt damage, give this unit +1/+1."
+},
+{
+  "Card Name": "Solar Grenade",
+  "Parallel": "Marcolian",
+  "Rarity": "Rare",
+  "Type": "Effect",
+  "Function": "Deal 2 damage to 2 random enemy units. If this card is Banked, deal 2 damage to a random enemy unit."
+},
+{
+  "Card Name": "Enthalpy's Grasp",
+  "Parallel": "Shroud",
+  "Rarity": "Uncommon",
+  "Type": "Effect",
+  "Function": "Deal 2 damage to all Enemy Units. They cannot attack on the Enemy Player's next turn."
+},
+{
+  "Card Name": "Entropy's Reach",
+  "Parallel": "Shroud",
+  "Rarity": "Uncommon",
+  "Type": "Effect",
+  "Function": "Pick and create a copy of a revealed card from the Enemy Player's Bank. It goes into your hand."
+},
+{
+  "Card Name": "Life Stream",
+  "Parallel": "Universal",
+  "Rarity": "Common",
+  "Type": "Relic",
+  "Function": "At the start of each player's turn, that player heals any target for 1."
+},
+{
+  "Card Name": "Life Well",
+  "Parallel": "Universal",
+  "Rarity": "Uncommon",
+  "Type": "Relic",
+  "Function": "At the start of each Player's Turn, heal that Player and all their Units for 1."
+ },
+ {
+  "Card Name": "Unstable Drone",
+  "Parallel": "Marcolian",
+  "Rarity": "Common",
+  "Type": "Unit",
+  "Function": "Defender. When this unit dies you deal damage equal to its attack to an enemy unit."
  }
 ]
