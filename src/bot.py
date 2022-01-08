@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-TOKEN = os.getenv("DEVELOPMENT_TOKEN")
+TOKEN = os.getenv("DISCORD_TOKEN")
 
 PARALLELS = ["earthen", "shroud", "augencore", "kathari", "marcolian", "universal"]
 TYPES = ["unit", "effect", "relic", "upgrade"]
