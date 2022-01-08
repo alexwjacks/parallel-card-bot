@@ -1,3 +1,5 @@
+import random
+
 card_name_index = "Card Name"
 parallel_index = "Parallel"
 rarity_index = "Rarity"
@@ -33,3 +35,15 @@ def hyphenate_card_name(name):
     words = name.split()
     words_hyphenated = "-".join(words)
     return words_hyphenated
+
+
+def format_random_card_from_list(card_list):
+    return format_card(random.choice(list(card_list.values())))
+
+
+def format_multiple_paragons(paragons):
+    accumulator = []
+    for name, data in paragons.items():
+        accumulator.append(format_paragon(data))
+    formatted = "\n\n".join(accumulator)
+    return formatted
