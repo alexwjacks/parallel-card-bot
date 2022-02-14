@@ -8,6 +8,9 @@ Learn more at:
 * The Discord server: https://discord.gg/Ux62xbpTYQ
 
 # Dependencies
+To install dependencies, run `pip install -r requirements.txt` from the root of the project. 
+If that fails, keep reading for other methods.
+
 The following py packages are required:
 
 ## bot.py (the Discord bot)
