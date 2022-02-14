@@ -5,3 +5,7 @@ src/.env
 src/*.iml
 src/__pycache__/*
 .idea
+
+# intermediate files created by spider.py
+merged.json
+spider.json
