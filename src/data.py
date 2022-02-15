@@ -2,16 +2,31 @@ import json
 import util
 
 # load the cards
+
+# parallels
 earthen_cards = {}
 kathari_cards = {}
 marcolian_cards = {}
 augencore_cards = {}
 shroud_cards = {}
 universal_cards = {}
+
+# types
 units = {}
 relics = {}
 effects = {}
 upgrades = {}
+
+# rarities
+rarities = {
+  "common": {},
+  "uncommon": {},
+  "rare": {},
+  "legendary": {},
+  "prime": {},
+}
+
+# general
 card_names = []
 cards = {}
 
@@ -50,6 +65,13 @@ with open('resources/cards.json', encoding='utf8') as cards_file:
             upgrades[card_name] = card
         else:
             print(f"Card '{card[util.card_name_index]}' with Type '{card[util.type_index]}' didn't match any card type")
+
+        # add to card rarity list
+        rarity_set = rarities.get(card[util.rarity_index].lower())
+        if not rarity_set == None:
+          rarity_set[card_name] = card
+        else:
+          print(f"Card '{card[util.card_name_index]}' with Rarity '{card[util.rarity_index]}' didn't match any card rarity")
 
 # load the paragons
 

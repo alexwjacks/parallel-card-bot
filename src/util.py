@@ -4,7 +4,15 @@ from fuzzywuzzy import fuzz
 
 card_name_index = "Card Name"
 parallel_index = "Parallel"
+
+# rarity indexes
 rarity_index = "Rarity"
+common_index = "common"
+uncommon_index = "uncommon"
+rare_index = "rare"
+legendary_index = "legendary"
+prime_index = "prime"
+
 type_index = "Type"
 function_index = "Function"
 
