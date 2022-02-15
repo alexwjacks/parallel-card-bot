@@ -23,66 +23,91 @@ async def on_ready():
         print(f'{bot.user} is connected to the following guild:\n'
               f'{guild.name}(id: {guild.id})')
 
-@bot.command(name="card", help="Look up a card. Use quotes for card names with multiple words.")
-async def card(ctx, arg):
-    card = util.find_card(arg, cards)
+@bot.command(name="card", help="Look up a card by name.")
+async def card(ctx, *args):
+    name = ' '.join(args).strip()
 
-    if not card:
-        response = f"Sorry, I don't know the card {arg}"
+    if not name:
+        response = f"Please give me something to work with. Usage: `!card name`"
     else:
-        response = util.format_card(card)
-    await ctx.send(response)
+        card = util.find_card(name, cards)
 
-@bot.command(name="paragon", help="Look up a Paragon. Use quotes for Paragon names with multiple words.")
-async def paragon(ctx, arg):
-    paragon = util.find_paragon(arg, paragons)
-
-    if not paragon:
-        response = f"Sorry, I don't know the Paragon {arg}."
-    else:
-        response = util.format_paragon(paragon)
-    await ctx.send(response)
-
-@bot.command(name="site", help="Look up a card on parallel.life. Use quotes for card names with multiple words.")
-async def site(ctx, arg):
-    card = util.find_card(arg, cards)
-
-    if not card:
-        response = f"Sorry, I don't know the card {arg}"
-    else:
-        response = util.get_card_url(card)
-    await ctx.send(response)
-
-@bot.command(name="random-card", help="Get a random card. Can specify a Parallel or card type.")
-async def random_card(ctx, arg):
-    response = ""
-    keyword = arg.lower()
-    if keyword not in PARALLELS and keyword not in TYPES:
-        response = "I don't know that keyword."
-    else:
-        if keyword == "kathari":
-            response = util.format_random_card_from_list(kathari_cards)
-        elif keyword == "marcolian":
-            response = util.format_random_card_from_list(marcolian_cards)
-        elif keyword == "earthen":
-            response = util.format_random_card_from_list(earthen_cards)
-        elif keyword == "shroud":
-            response = util.format_random_card_from_list(shroud_cards)
-        elif keyword == "augencore":
-            response = util.format_random_card_from_list(augencore_cards)
-        elif keyword == "universal":
-            response = util.format_random_card_from_list(universal_cards)
-        elif keyword == "unit":
-            response = util.format_random_card_from_list(units)
-        elif keyword == "effect":
-            response = util.format_random_card_from_list(effects)
-        elif keyword == "relic":
-            response = util.format_random_card_from_list(relics)
-        elif keyword == "upgrade":
-            response = util.format_random_card_from_list(upgrades)
+        if not card:
+            response = f"Sorry, I couldn't find a card that even slightly resembled '{name}'"
         else:
-            # if we get here something went real wonky
-            print(f"Arg {arg} didn't match any Parallel")
+            response = util.format_card(card)
+
+    await ctx.send(response)
+
+@bot.command(name="paragon", help="Look up a Paragon by name.")
+async def paragon(ctx, *args):
+    name = ' '.join(args).strip()
+
+    if not name:
+        response = f"Please give me something to work with. Usage: `!paragon name`"
+    else:
+        paragon = util.find_paragon(name, paragons)
+
+        if not paragon:
+            response = f"Sorry, I find a paragon that even slightly resembled '{name}'"
+        else:
+            response = util.format_paragon(paragon)
+
+    await ctx.send(response)
+
+@bot.command(name="site", help="Get a link to the card on the parallel website.")
+async def site(ctx, *args):
+    name = ' '.join(args).strip()
+
+    if not name:    
+        card = util.find_card(name, cards)
+
+        if not card:
+            response = f"Sorry, I find a card that even slightly resembled '{name}'"
+        else:
+            response = util.get_card_url(card)
+
+    await ctx.send(response)
+
+@bot.command(name="random-card", help="Get a random card. Optionally specify a Parallel, Card Type, or Rarity.")
+async def random_card(ctx, *args):
+    response = ""
+
+    if len(args) == 0:
+        response = util.format_random_card_from_list(cards)
+    else:
+        keyword = args[0].strip().lower()
+        switch = {
+            # parallels
+            "kathari": kathari_cards,
+            "marcolian": marcolian_cards,
+            "earthen" : earthen_cards,
+            "shroud" : shroud_cards,
+            "augencore" : augencore_cards,
+            "universal" : universal_cards,
+            # types
+            "unit" : units,
+            "effect" : effects,
+            "relic" : relics,
+            "upgrade" : upgrades,
+            # rarities
+            "common" : rarities[util.common_index],
+            "uncommon" : rarities[util.uncommon_index],            
+            "rare" : rarities[util.rare_index],            
+            "legendary" : rarities[util.legendary_index],            
+            "prime" : rarities[util.prime_index],            
+        }
+
+        list = switch.get(keyword, None)
+
+        if list:
+            response = util.format_random_card_from_list(list)
+        else:
+            response = "\nUsage: `!random-card [keyword]` where the optional `keyword` is a Parallel, Card Type, or Rarity:"
+            response += "\n  Parallels: `" + ' '.join(PARALLELS) + '`'
+            response += "\n  Card Types: `" + ' '.join(TYPES) + '`'
+            response += "\n  Card Rarities: `" + ' '.join(rarities.keys()) + '`'
+
     await ctx.send(response)
 
 @bot.command(name="list-paragons", help="List the Paragons for a given Parallel.")
