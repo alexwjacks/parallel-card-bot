@@ -23,7 +23,7 @@ async def on_ready():
         print(f'{bot.user} is connected to the following guild:\n'
               f'{guild.name}(id: {guild.id})')
 
-@bot.command(name="card", help="Look up a card by name.")
+@bot.command(name="card", help="Look up a card by name")
 async def card(ctx, *args):
     name = ' '.join(args).strip()
 
@@ -39,7 +39,18 @@ async def card(ctx, *args):
 
     await ctx.send(response)
 
-@bot.command(name="paragon", help="Look up a Paragon by name.")
+@bot.command(name="credits", help="New phone, who dis?")
+async def give_credit(ctx, *args):
+    credits = f"Lazergician made this all by himself with no help whatsoever,"
+    credits += f" especially not by Deuce or that lazybones JERisBRISK."
+    await ctx.send(credits)
+
+@bot.command(name="disclaimer", help="Things are subject to change")
+async def disclaim(ctx, *args):
+    disclaimer = "Certain things spoken about in chat by team members are subject to change as this game and drops are in progress and in active development."
+    await ctx.send(disclaimer)
+
+@bot.command(name="paragon", help="Look up a Paragon by name")
 async def paragon(ctx, *args):
     name = ' '.join(args).strip()
 
@@ -55,7 +66,7 @@ async def paragon(ctx, *args):
 
     await ctx.send(response)
 
-@bot.command(name="site", help="Get a link to the card on the parallel website.")
+@bot.command(name="site", help="Get a link to the card")
 async def site(ctx, *args):
     name = ' '.join(args).strip()
 
@@ -72,7 +83,7 @@ async def site(ctx, *args):
 
     await ctx.send(response)
 
-@bot.command(name="random-card", help="Get a random card. Optionally specify a Parallel, Card Type, or Rarity.")
+@bot.command(name="random-card", help="Optionally provide a Parallel, Card Type, or Rarity")
 async def random_card(ctx, *args):
     response = ""
 
@@ -113,7 +124,7 @@ async def random_card(ctx, *args):
 
     await ctx.send(response)
 
-@bot.command(name="list-paragons", help="List the Paragons for a given Parallel.")
+@bot.command(name="list-paragons", help="List a Parallel's Paragons")
 async def list_paragons(ctx, arg):
     faction = arg.lower()
     response = ""
