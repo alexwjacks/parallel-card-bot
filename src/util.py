@@ -3,6 +3,7 @@ import re
 from fuzzywuzzy import fuzz
 
 card_name_index = "Card Name"
+card_url_index = "URL"
 parallel_index = "Parallel"
 
 # rarity indexes
@@ -39,9 +40,17 @@ def format_paragon(paragon):
     return formatted
 
 def get_card_url(card):
-    hyphenated = hyphenate_card_name(card[card_name_index].lower())
-    card_name = re.sub("[^a-zA-Z0-9-]", "", hyphenated)
-    return f"https://parallel.life/cards/{card_name}"
+    url = card.get(card_url_index)
+
+    # we have an override URL defined
+    if url:
+        return url
+
+    # no override defined, construct the URL from the name
+    else:
+        hyphenated = hyphenate_card_name(card[card_name_index].lower())
+        card_name = re.sub("[^a-zA-Z0-9-]", "", hyphenated)
+        return f"https://parallel.life/cards/{card_name}"
 
 def hyphenate_card_name(name):
     words = name.split()

@@ -49,7 +49,7 @@ async def paragon(ctx, *args):
         paragon = util.find_paragon(name, paragons)
 
         if not paragon:
-            response = f"Sorry, I find a paragon that even slightly resembled '{name}'"
+            response = f"Sorry, I couldn't find a paragon that even slightly resembled '{name}'"
         else:
             response = util.format_paragon(paragon)
 
@@ -59,11 +59,14 @@ async def paragon(ctx, *args):
 async def site(ctx, *args):
     name = ' '.join(args).strip()
 
-    if not name:    
+    if not name:
+        response = f"Sorry, I couldn't find a card that even slightly resembled '{name}' in my data banks."
+        response += "Try searching for it on https://parallel.life/cards/"
+    else:
         card = util.find_card(name, cards)
 
         if not card:
-            response = f"Sorry, I find a card that even slightly resembled '{name}'"
+            response = f"Sorry, I couldn't find a card that even slightly resembled '{name}'"
         else:
             response = util.get_card_url(card)
 
