@@ -1,90 +1,90 @@
 [
  {
-   "Paragon Name": "Scipius Magnus Alpha",
+   "Name": "Scipius Magnus Alpha",
    "Parallel": "Kathari",
    "Passive": "Whenever you bank a unit, create a 1/1 clone.",
    "Active": "When you play Scipius, activate all your units' Muster ability."
  },
  {
-   "Paragon Name": "Aetio, Exalted Hydrolist",
+   "Name": "Aetio, Exalted Hydrolist",
    "Parallel": "Kathari",
    "Passive": "Each time a Kathari unit is mustered, waste the top card of your deck.",
    "Active": "When you play Aetio, if you have no cards left in your deck, create a 1/1 clone that gains all the stats and keywords of units in your waste. This clone ignores Defender and immediately attacks your enemy."
  },
  {
-   "Paragon Name": "Gnaeus Valerius Alpha",
+   "Name": "Gnaeus Valerius Alpha",
    "Parallel": "Kathari",
    "Passive": "At the end of your turn, if a friendly unit did combat damage and survived, that unit gains +1/+1.",
    "Active": "When this unit attacks, up to 3 other units gain +1/+2 until end of turn."
  },
  {
-   "Paragon Name": "Arak, Combat Overseer",
+   "Name": "Arak, Combat Overseer",
    "Parallel": "Augencore",
    "Passive": "Whenever an upgraded unit is wasted, create a 1/1 nanobot.",
    "Active": "Muster: create a swarm, a 4/4 unit, which has the ability: when this unit is wasted, create up to 4 1/1 nanobots, or transform the nanobot as a +1/+1 token to be attached to units."
  },
  {
-   "Paragon Name": "Ja'ahn, Chief Engineer",
+   "Name": "Ja'ahn, Chief Engineer",
    "Parallel": "Augencore",
    "Passive": "Anytime you would salvage, the effect is increased by 1 (salvage is a value on units, where if the unit is wasted, you may recycle a number of upgrades equal to the salvage value on this unit and attach them to another unit).",
    "Active": "When this unit is played, reveal a random banked card until you reveal an upgrade. For each card revealed, equip a copy of the revealed upgrade to any unit."
  },
  {
-   "Paragon Name": "Juggernaut Workshop",
+   "Name": "Juggernaut Workshop",
    "Parallel": "Augencore",
    "Passive": "Begin the game with 5 counters on Juggernaut Workshop. At the end of your turn, remove a token. When JW has no tokens, create one of the following: (1) A 4/4 Attack juggernaut with Armed; (2) A 3/6 Defense juggernaut with Defender; or (3) A 2/5 Artillery juggernaut with the ability: when this unit enter the battlefield, deal 3 damage to target unit. After creating a unit, place 5 counters on Juggernaut Workshop.",
    "Active": "None."
  },
  {
-   "Paragon Name": "Niamh, the Wielder of Fate",
+   "Name": "Niamh, the Wielder of Fate",
    "Parallel": "Shroud",
    "Passive": "You may not include cards in your starting deck with an energy cost of more than 5.",
    "Active": "Battle-Ready (can attack on turn she is played). This card cannot be targeted by effects, and ignores Defenders. Has the ability: When she enters the battlefield, for each relic, effect or upgrade you have played, play a random unit from any Parallel with the same cost."
  },
  {
-   "Paragon Name": "Brand, Steward Eternal",
+   "Name": "Brand, Steward Eternal",
    "Parallel": "Shroud",
    "Passive": "Whenever a unit you control is banished, you may look at the top card of your deck and place it either at the bottom or top of your deck.",
    "Active": "When this unit damages another unit, banish that unit to the Singularity. If this unit is killed in combat or on your opponent's turn, return all units from the Singularity under their owner's control."
  },
  {
-   "Paragon Name": "The New Dawn",
+   "Name": "The New Dawn",
    "Parallel": "Shroud",
    "Passive": "Both players play with the top card of their deck face up.",
    "Active": "The New Dawn cannot be targeted by Effects. You may play one energy to activate the New Dawn, to banish it to the Singularity. At the end of your next turn, the New Dawn returns to the Battlefield, and you may return a card from the Singularity back to your Hand."
  },
  {
-   "Paragon Name": "Shoshanna, Rebuilder of Earth",
+   "Name": "Shoshanna, Rebuilder of Earth",
    "Parallel": "Earthen",
    "Passive": "You have no max life total.",
    "Active": "When you play Shoshanna, double your current life (HP)."
  },
  {
-   "Paragon Name": "Gaffar, Arbiter of Earth",
+   "Name": "Gaffar, Arbiter of Earth",
    "Parallel": "Earthen",
    "Passive": "Whenever a unit is pacified, all other friendly unit with Pacifist gains +1/+1.",
    "Active": "Gaffar is a Pacifist Defender. Whenever this unit defends, Pacify the attacker."
  },
  {
-   "Paragon Name": "Nehemiah, Defender of Earth",
+   "Name": "Nehemiah, Defender of Earth",
    "Parallel": "Earthen",
    "Passive": "All other units with defender deals damage equal to their health instead of their attack.",
    "Active": "Nehemiah is a Defender. When Nehemiah is in play, you may assign more than one Defender to block an attack."
  },
  {
-   "Paragon Name": "Catherine Lapointe, the Mad General",
+   "Name": "Catherine Lapointe, the Mad General",
    "Parallel": "Marcolian",
    "Passive": "The second unit you play each turn gets +1/+1.",
    "Active": "At the end of your turn, Catherine randomly attacks an enemy. You cannot control her to attack and she cannot be healed."
  },
  {
-   "Paragon Name": "Lemieux, Master Commander",
+   "Name": "Lemieux, Master Commander",
    "Parallel": "Marcolian",
    "Passive": "Begin the game with a 1/2 unseen infiltrator on the board.",
    "Active": "Choose one of the following effects. if you activated Assault, do all three (Assault: If this unit dealt combat damage this turn, Assault is activated): (1) Destroy target unit; (2) Return target unit from waste to your hand; or (3) Units you control gain +1/+1 this turn."
  },
  {
-   "Paragon Name": "Armoured Division HQ",
+   "Name": "Armoured Division HQ",
    "Parallel": "Marcolian",
    "Passive": "Vehicles you control gain +1/+0.",
    "Active": "Pacifist. First time each turn a friendly vehicle deals damage to a player, draw a card."

@@ -1,436 +1,681 @@
 [
   {
-    "Card Name": "Data breach",
+    "Name": "Data breach",
     "Parallel": "Universal",
     "Rarity": "Legendary",
     "Type": "Effect",
-    "Function": "Reveal all cards in each player's Bank."
+    "Function": "Reveal all cards in each player's Bank.",
+    "Artist": "Oscar Mar"
   },
   {
-    "Card Name": "Freydis, Echelon Kingpin",
+    "Name": "Freydis, Echelon Kingpin",
     "Parallel": "Universal",
     "Rarity": "Legendary",
     "Type": "Unit",
     "Function": "Muster: If starting Deck contains only Universal cards: Draw 4 cards; deal 4 damage to any target; give one unit +4/+4; gain 4 life; and return target Wasted Unit with cost up to 4 to Battlefield."
   },
   {
-    "Card Name": "Master Poisoner",
+    "Name": "Master Poisoner",
     "Parallel": "Universal",
     "Rarity": "Rare",
     "Type": "Unit",
     "Function": "While this Unit is on the Battlefield, all Combat Damage is lethal (Units are Wasted by taking any Combat Damage)."
   },
   {
-    "Card Name": "Memento of the Fallen",
+    "Name": "Memento of the Fallen",
     "Parallel": "Universal",
     "Rarity": "Legendary",
     "Type": "Relic",
     "Function": "Each time this card is placed on a Unit, put a +1/+1 counter on Memento of the Fallen. When this Unit dies, you may put this card on another Unit. If this card is Wasted on your opponent's term, remove all counters and put this card in your hand."
   },
   {
-    "Card Name": "Recon",
+    "Name": "Recon",
     "Parallel": "Universal",
     "Rarity": "Uncommon",
     "Type": "Effect",
-    "Function": "Name a card type (Relic, Unit, Upgrade or Effect). Reveal two of the Enemy's Banked cards. If either card matches the named card type, draw a card."
+    "Function": "Name a card type (Relic, Unit, Upgrade or Effect). Reveal two of the Enemy's Banked cards. If either card matches the named card type, draw a card.",
+    "Artist": "Oscar Mar"
   },
   {
-    "Card Name": "Rug Poll",
+    "Name": "Rug Poll",
     "Parallel": "Universal",
     "Rarity": "Uncommon",
     "Type": "Relic",
     "Function": "Select a Unit. If an Effect would that Unit, it targets Rug Poll instead."
   },
   {
-    "Card Name": "Seer's Stone",
+    "Name": "Seer's Stone",
     "Parallel": "Universal",
     "Rarity": "Rare",
     "Type": "Relic",
     "Function": "The top card of your Deck is always face up. You can Waste a card you control including Bank cards to waste the top card of your Deck."
   },
   {
-    "Card Name": "Smuggled Supplies",
+    "Name": "Smuggled Supplies",
     "Parallel": "Universal",
     "Rarity": "Common",
     "Type": "Effect",
-    "Function": "Until the end of your turn, you may play any revealed cards in your bank as though they were in your hand."
+    "Function": "Until the end of your turn, you may play any revealed cards in your bank as though they were in your hand.",
+    "Artist": "Nacho Yagüe"
   },
   {
-    "Card Name": "Star Chart",
+    "Name": "Star Chart",
     "Parallel": "Universal",
     "Rarity": "Rare",
     "Type": "Relic",
-    "Function": "At the start of your turn, instead of drawing a card, look at the top 3 cards, put one in your hand, and the other two on the bottom of your deck in a random order."
+    "Function": "At the start of your turn, instead of drawing a card, look at the top 3 cards, put one in your hand, and the other two on the bottom of your deck in a random order.",
+    "Artist": "Oscar Mar"
   },
   {
-    "Card Name": "Amperage",
+    "Name": "Amperage",
     "Parallel": "Augencore",
     "Rarity": "Rare",
     "Type": "Upgrade",
-    "Function": "When the upgraded unit dies, deal 1 damage to all enemy units. Then, bank this upgrade instead of wasting it."
+    "Function": "When the upgraded unit dies, deal 1 damage to all enemy units. Then, bank this upgrade instead of wasting it.",
+    "Artist":"Oscar Mar"
   },
   {
-    "Card Name": "Foundry Technician",
+    "Name": "Foundry Technician",
     "Parallel": "Augencore",
     "Rarity": "Uncommon",
     "Type": "Unit",
-    "Function": "Whenever you play an Upgrade, draw a card."
+    "Function": "Whenever you play an Upgrade, draw a card.",
+    "Artist": "Nacho Yagüe"
   },
   {
-    "Card Name": "G.R.A.U.L",
+    "Name": "G.R.A.U.L",
     "Parallel": "Augencore",
     "Rarity": "Rare",
     "Type": "Unit",
-    "Function": "When this Unit enters the Battlefield, you may equip one Upgrade from your Bank onto it. When this Unit is Wasted, Banish all Upgrades attached to it."
+    "Function": "When this Unit enters the Battlefield, you may equip one Upgrade from your Bank onto it. When this Unit is Wasted, Banish all Upgrades attached to it.",
+    "Artist": "Oscar Cafaro"
   },
   {
-    "Card Name": "Graphene Batteries",
+    "Name": "Graphene Batteries",
     "Parallel": "Augencore",
     "Rarity": "Uncommon",
     "Type": "Upgrade",
-    "Function": "Upgraded Unit receives +4/+0. When this Unit dies, deal its damage to all Friendly Units."
+    "Function": "Upgraded Unit receives +4/+0. When this Unit dies, deal its damage to all Friendly Units.",
+    "Artist": "Oscar Mar"
   },
   {
-    "Card Name": "Instant Replicator",
+    "Name": "Instant Replicator",
     "Parallel": "Augencore",
     "Rarity": "Rare",
     "Type": "Upgrade",
-    "Function": "When this Upgrade enters the Battlefield it becomes a copy of any other Upgrade on the Battlefield."
+    "Function": "When this Upgrade enters the Battlefield it becomes a copy of any other Upgrade on the Battlefield.",
+    "Artist": "Oscar Mar"
   },
   {
-    "Card Name": "THUNDR-01 Munitions",
+    "Name": "THUNDR-01 Munitions",
     "Parallel": "Augencore",
     "Rarity": "Uncommon",
     "Type": "Relic",
-    "Function": "All Damage dealt and received by Friendly Units is increased by 1."
+    "Function": "All Damage dealt and received by Friendly Units is increased by 1.",
+    "Artist": "Oscar Cafaro"
   },
   {
-    "Card Name": "Trade Secrets",
+    "Name": "Trade Secrets",
     "Parallel": "Augencore",
     "Rarity": "Legendary",
     "Type": "Effect",
     "Function": "Copy all Upgrades from one Friendly Unit to another."
   },
   {
-    "Card Name": "Aurora Fungi",
+    "Name": "Aurora Fungi",
     "Parallel": "Earthen",
     "Rarity": "Uncommon",
     "Type": "Upgrade",
-    "Function": "Upgraded Unit receives +0/+4."
+    "Function": "Upgraded Unit receives +0/+4.",
+    "Artist": "Oscar Mar"
   },
   {
-    "Card Name": "Change of Heart",
+    "Name": "Change of Heart",
     "Parallel": "Earthen",
     "Rarity": "Common",
     "Type": "Effect",
-    "Function": "Target Unit gains Pacifist."
+    "Function": "Target Unit gains Pacifist.",
+    "Artist": "Oscar Mar"
   },
   {
-    "Card Name": "Gaffar's Peace Pipe",
+    "Name": "Gaffar's Peace Pipe",
     "Parallel": "Earthen",
     "Rarity": "Legendary",
     "Type": "Relic",
     "Function": "At the beginning of each player's turn, put a counter on this card and give that player's Unit Pacifist. When there are 6 counters on this card, Waste it."
   },
   {
-    "Card Name": "Gaia's Call",
+    "Name": "Gaia's Call",
     "Parallel": "Earthen",
     "Rarity": "Legendary",
     "Type": "Relic",
-    "Function": "At the start of your turn, put a counter on this card. When there are 3 or more counters on this card, Waste this card and put any Banked Units onto the Battlefield. All Units gain “Battle Ready” until end of turn. Ignores Pacifist."
+    "Function": "At the start of your turn, put a counter on this card. When there are 3 or more counters on this card, Waste this card and put any Banked Units onto the Battlefield. All Units gain “Battle Ready” until end of turn. Ignores Pacifist.",
+    "Artist": "Oscar Mar"
   },
   {
-    "Card Name": "Kamuy Protector",
+    "Name": "Kamuy Protector",
     "Parallel": "Earthen",
     "Rarity": "Uncommon",
     "Type": "Unit",
-    "Function": "As long as your Health is above 10, this Unit has Pacifist. If your Health is 10 or below, this Unit's Attack and Health values are swapped and it loses Pacifist."
+    "Function": "As long as your Health is above 10, this Unit has Pacifist. If your Health is 10 or below, this Unit's Attack and Health values are swapped and it loses Pacifist.",
+    "Artist" : "Chris Bjerre"
   },
   {
-    "Card Name": "Malachite Shield",
+    "Name": "Malachite Shield",
     "Parallel": "Earthen",
     "Rarity": "Uncommon",
     "Type": "Upgrade",
     "Function": "Equipped Unit gets +1/+4 and gains Defender. Whenever this Unit deals damage to a player, that player must reveal a banked card. Whenever this Unit takes damage, reveal a banked card."
   },
   {
-    "Card Name": "Revitalizing Growth",
+    "Name": "Revitalizing Growth",
     "Parallel": "Earthen",
     "Rarity": "Uncommon",
     "Type": "Effect",
-    "Function": "Heal yourself 5 Health."
+    "Function": "Heal yourself 5 Life.",
+    "Artist": "Oscar Mar"
   },
   {
-    "Card Name": "Soleia, Disciple of Gaffar",
+    "Name": "Soleia, Disciple of Gaffar",
     "Parallel": "Earthen",
     "Rarity": "Legendary",
     "Type": "Unit",
-    "Function": "At the end of your turn, if no combat damage was dealt this turn, pick one Unit you control. That Unit gains Armed and fights a target enemy Unit on the Battlefield. If there is no Unit to fight, Waste this Unit."
+    "Function": "At the end of your turn, if no combat damage was dealt this turn, pick one Unit you control. That Unit gains Armed and fights a target enemy Unit on the Battlefield. If there is no Unit to fight, Waste this Unit.",
+    "Artist": "Nacho Yagüe"
   },
   {
-    "Card Name": "Staff of Shoshanna",
+    "Name": "Staff of Shoshanna",
     "Parallel": "Earthen",
     "Rarity": "Uncommon",
     "Type": "Relic",
     "Function": "Once per turn, pick a Unit that gained Health or healed this turn. Then swap that Unit's Health with its Attack for the rest of the turn."
   },
   {
-    "Card Name": "The Tree of Nehemiah",
+    "Name": "The Tree of Nehemiah",
     "Parallel": "Earthen",
     "Rarity": "Uncommon",
     "Type": "Relic",
-    "Function": "At the Start of your turn, Create a 0/1 Defender. Intel: 3 Create a 2/1 Defender instead (Intel: X: X Enemy Bank Cards must be revealed)"
+    "Function": "At the Start of your turn, Create a 0/1 Defender. Intel: 3 Create a 2/1 Defender instead (Intel: X: X Enemy Bank Cards must be revealed)",
+    "Artist": "Oscar Mar"
   },
   {
-    "Card Name": "Antius's Forecast",
+    "Name": "Antius's Forecast",
     "Parallel": "Kathari",
     "Rarity": "Common",
     "Type": "Effect",
-    "Function": "Create a copy of a Unit of your choice from your Bank. It gains “Battle Ready” and “at the end of your turn, waste this Unit.” It is a Clone."
+    "Function": "Create a copy of a Unit of your choice from your Bank. It gains “Battle Ready” and “at the end of your turn, waste this Unit.” It is a Clone.",
+    "Artist":"Oscar Mar"
   },
   {
-    "Card Name": "Archivist's Pride",
+    "Name": "Archivist's Pride",
     "Parallel": "Kathari",
     "Rarity": "Common",
     "Type": "Effect",
-    "Function": "Shuffle 4 copies of a Banked Kathari Unit into your deck. Waste the card that was copied."
+    "Function": "Shuffle 4 copies of a Banked Kathari Unit into your deck. Waste the card that was copied.",
+    "Artist": "Oscar Mar"
   },
   {
-    "Card Name": "Cytokinesis",
+    "Name": "Cytokinesis",
     "Parallel": "Kathari",
     "Rarity": "Rare",
     "Type": "Effect",
-    "Function": "Draw all copies of target Unit from your Deck."
+    "Function": "Draw all copies of target Unit from your Deck.",
+    "Artist": "Oscar Mar"
   },
   {
-    "Card Name": "Eye of Galli",
+    "Name": "Eye of Galli",
     "Parallel": "Kathari",
     "Rarity": "Rare",
     "Type": "Effect",
     "Function": "When played, Enemy draws 2 cards and picks one to show you. They put the other card on top of their Deck and Waste the shown card. This card becomes a copy of the shown card."
   },
   {
-    "Card Name": "Genetic Correction",
+    "Name": "Genetic Correction",
     "Parallel": "Kathari",
     "Rarity": "Uncommon",
     "Type": "Effect",
-    "Function": "Transform target Enemy Unit into a copy of target friendly Unit."
+    "Function": "Transform target Enemy Unit into a copy of target friendly Unit.",
+    "Artist": "Oscar Mar"
   },
   {
-    "Card Name": "Reliant Gamma",
+    "Name": "Reliant Gamma",
     "Parallel": "Kathari",
     "Rarity": "Uncommon",
     "Type": "Effect",
-    "Function": "At the start of your turn, if you have a Clone on the Field, this Unit gains +1/+1."
+    "Function": "At the start of your turn, if you have a Clone on the Field, this Unit gains +1/+1.",
+    "Artist": "Nacho Yagüe"
   },
   {
-    "Card Name": "Seeing Triple",
+    "Name": "Seeing Triple",
     "Parallel": "Kathari",
     "Rarity": "Common",
     "Type": "Effect",
-    "Function": "Create three 1/1 Clones with Defender."
+    "Function": "Create three 1/1 Clones with Defender.",
+    "Artist": "Oscar Cafaro"
   },
   {
-    "Card Name": "Synchronicity",
+    "Name": "Synchronicity",
     "Parallel": "Kathari",
     "Rarity": "Common",
     "Type": "Effect",
-    "Function": "Create a copy of a Non-Leader Unit of the Field."
+    "Function": "Create a copy of a Non-Leader Unit of the Field.",
+    "Artist": "Oscar Mar"
   },
   {
-    "Card Name": "Tabula Rasa",
+    "Name": "Tabula Rasa",
     "Parallel": "Kathari",
     "Rarity": "Rare",
     "Type": "Unit",
-    "Function": "Muster: Spend all remaining energy. Reveal a banked Unit equal to the amount of energy Spent, this Unit becomes a copy of the Revealed Unit."
+    "Function": "Muster: Spend all remaining energy. Reveal a banked Unit equal to the amount of energy Spent, this Unit becomes a copy of the Revealed Unit.",
+    "Artist": "Nacho Yagüe"
   },
   {
-    "Card Name": "Artillery Volley",
+    "Name": "Artillery Volley",
     "Parallel": "Marcolian",
     "Rarity": "Legendary",
     "Type": "Effect",
-    "Function": "Waste a Friendly Unit. Deal damage equal to that Unit's Attack to all Enemy Units."
+    "Function": "Waste a Friendly Unit. Deal damage equal to that Unit's Attack to all Enemy Units.",
+    "Artist": "Oscar Mar"
   },
   {
-    "Card Name": "Marcolian Bannerman",
+    "Name": "Marcolian Bannerman",
     "Parallel": "Marcolian",
     "Rarity": "Common",
     "Type": "Unit",
     "Function": "Whenever you play an Effect card, this Unit gains +1/+1."
   },
   {
-    "Card Name": "Earth Breaker Cannon",
+    "Name": "Earth Breaker Cannon",
     "Parallel": "Marcolian",
     "Rarity": "Legendary",
     "Type": "Unit",
     "Function": "Whenever another Vehicle enters the Battlefield, Earth Breaker Cannon deals 5 damage to any Unit."
   },
   {
-    "Card Name": "Manipulation Ray",
+    "Name": "Manipulation Ray",
     "Parallel": "Marcolian",
     "Rarity": "Rare",
     "Type": "Effect",
-    "Function": "Cause a Unit to attack an adjacent Unit."
+    "Function": "Cause a Unit to attack an adjacent Unit.",
+    "Artist": "Nacho Yagüe"
   },
   {
-    "Card Name": "Neutron Bomb",
+    "Name": "Neutron Bomb",
     "Parallel": "Marcolian",
     "Rarity": "Legendary",
     "Type": "Effect",
-    "Function": "Deal 3 Damage to the Enemy Unit. If that Unit is Wasted, deal 2 Damage to a new Enemy Unit. If that Unit is Wasted, deal 1 Damage to a new Enemy Unit."
+    "Function": "Deal 3 Damage to the Enemy Unit. If that Unit is Wasted, deal 2 Damage to a new Enemy Unit. If that Unit is Wasted, deal 1 Damage to a new Enemy Unit.",
+    "Artist": "Oscar Mar"
   },
   {
-    "Card Name": "Orbital Strike",
+    "Name": "Orbital Strike",
     "Parallel": "Marcolian",
     "Rarity": "Rare",
     "Type": "Effect",
-    "Function": "Deal 5 damage to any target."
+    "Function": "Deal 5 damage to any target.",
+    "Artist": "Oscar Mar"
   },
   {
-    "Card Name": "Ruthless Sergeant",
-    "Parallel": "Marcolian",
-    "Rarity": "Uncommon",
-    "Type": "Unit",
-    "Function": "Muster: waste up to three cards in your bank. Deal 3 damage to any Unit for each card Wasted. You may choose a new Unit for each card."
-  },
-  {
-    "Card Name": "Trigger-Happy Trooper",
+    "Name": "Ruthless Sergeant",
     "Parallel": "Marcolian",
     "Rarity": "Uncommon",
     "Type": "Unit",
-    "Function": "When this Unit attacks, deal 1 damage to both players."
+    "Function": "Muster: Waste up to 3 cards in your bank. Deal 3 damage to any Unit for each card Wasted. You may choose a new target for each card Wasted.",
+    "Artist": "Nacho Yagüe"
   },
   {
-    "Card Name": "Ashes to Ashes",
+    "Name": "Trigger-Happy Trooper",
+    "Parallel": "Marcolian",
+    "Rarity": "Uncommon",
+    "Type": "Unit",
+    "Function": "When this Unit attacks, deal 1 damage to both players.",
+    "Artist": "Nacho Yagüe"
+  },
+  {
+    "Name": "Ashes to Ashes",
     "Parallel": "Shroud",
     "Rarity": "Rare",
     "Type": "Effect",
-    "Function": "Banish 1 random card from your hand then Draw 2."
+    "Function": "Banish 1 random card from your hand then Draw 2.",
+    "Artist": "Oscar Mar"
   },
   {
-    "Card Name": "Cost of Creation",
+    "Name": "Cost of Creation",
     "Parallel": "Shroud",
     "Rarity": "Rare",
     "Type": "Effect",
-    "Function": "Discard any number of cards and draw that many. You lose life equal to the number of cards discarded. If you discarded every card in your hand, Banish the discarded cards instead."
+    "Function": "Discard any number of cards and draw that many. You lose life equal to the number of cards discarded. If you discarded every card in your hand, Banish the discarded cards instead.",
+    "Artist":"Oscar Mar"
   },
   {
-    "Card Name": "Demolecularize",
+    "Name": "Demolecularize",
     "Parallel": "Shroud",
     "Rarity": "Common",
     "Type": "Effect",
-    "Function": "Banish all Units to your Singularity."
+    "Function": "Banish all Units to your Singularity.",
+    "Artist": "Oscar Mar"
   },
   {
-    "Card Name": "Pocket Dimension",
+    "Name": "Pocket Dimension",
     "Parallel": "Shroud",
+    "Editions": {
+      "Concept_art": {
+        "01": "https://parallel.life/cards/84",
+        "02": "https://parallel.life/cards/83"
+      },
+      "Collectible_card": {
+        "Day": "https://parallel.life/cards/pocket-dimension",
+        "Night": "https://parallel.life/cards/pocket-dimension-2"
+      },
+      "Se": {
+        "Day": "https://parallel.life/cards/pocket-dimension-se",
+        "Night": "https://parallel.life/cards/pocket-dimension-se-2"
+      },
+      "Masterpiece": "https://parallel.life/cards/188"
+    },
     "Rarity": "Rare",
+    "Description": "It sure beats a traditional bag of tricks.",
+    "Function": "You no longer draw cards at the start of your turn or at the end of your turn if you Banked a card. Instead, Draw one random card from either your Deck, or Singularity whenever an Effect is played by either Player.",
     "Type": "Relic",
-    "Function": "You no longer draw cards at the start of your turn or at the end of your turn if you Banked a card. Instead, Draw one random card from either your Deck, or Singularity whenever an Effect is played by either Player."
+    "Artist": "Oscar Mar"
   },
   {
-    "Card Name": "Annihilate",
+    "Name": "Annihilate",
     "Parallel": "Universal",
     "Rarity": "Rare",
     "Type": "Effect",
-    "Function": "Waste Target Unit or Relic"
+    "Function": "Waste Target Unit or Relic",
+    "Artist":"Oscar Mar"
   },
   {
-    "Card Name": "Infused Core",
+    "Name": "Infused Core",
     "Parallel": "Universal",
     "Rarity": "Rare",
     "Type": "Relic",
-    "Function": "Place a Banked card face up under this Relic. That card produces 2 energy each turn. If this Relic is destroyed or removed, Waste the Card underneath. When this Relic is Wasted, lose 4 Life."
+    "Function": "Place a Banked card face up under this Relic. That card produces 2 energy each turn. If this Relic is destroyed or removed, Waste the Card underneath. When this Relic is Wasted, lose 4 Life.",
+    "Artist": "Oscar Mar"
   },
   {
-    "Card Name": "Overclock Key",
-    "Parallel": "N/A",
-    "Rarity": "Asset",
+    "Name": "Overclock Key",
+    "Rarity": "Prime",
     "Type": "Keyframing",
-    "Function": "When utilized in Key Framing, the Overclock Key handsomely rewards win streaks with bonus Prime tokens."
+    "Function": "When utilized in Key Framing, the Overclock Key handsomely rewards win streaks with bonus Prime tokens.",
+    "Artist": "Oscar Mar"
   },
   {
-    "Card Name": "Reclamator",
+    "Name": "Reclamator",
     "Parallel": "Augencore",
     "Rarity": "Rare",
     "Type": "Relic",
-    "Function": "Whenever a Unit is wasted, gain 1 temporary energy to be used this turn only. If this Relic is Banked, gain 1 extra energy this turn."
+    "Function": "Whenever a Unit is wasted, gain 1 temporary energy to be used this turn only. If this Relic is Banked, gain 1 extra energy this turn.",
+    "Artist": "Oscar Mar"
   },
   {
-    "Card Name": "Ocular Implant",
+    "Name": "Ocular Implant",
     "Parallel": "Augencore",
     "Rarity": "Common",
     "Type": "Upgrade",
-    "Function": "When Upgraded Unit attacks, draw a card."
+    "Function": "When Upgraded Unit attacks, draw a card.",
+    "Artist": "Oscar Cafaro"
   },
   {
-    "Card Name": "Battle-Hardened Warrior",
+    "Name": "Battle-Hardened Warrior",
     "Parallel": "Earthen",
     "Rarity": "Uncommon",
     "Type": "Unit",
-    "Function": "Whenever this unit is healed it gains attack equal to the life restored."
+    "Function": "Whenever this unit is healed it gains attack equal to the life restored.",
+    "Artist": "Dhenzel Obeng"
   },
   {
-    "Card Name": "Interrogation Tools",
+    "Name": "Interrogation Tools",
     "Parallel": "Marcolian",
     "Rarity": "Common",
     "Type": "Relic",
-    "Function": "Once per turn, whenever a source would deal damage to the enemy, negate that damage and force them to reveal a banked card instead."
+    "Function": "Once per turn, whenever a source would deal damage to the enemy, negate that damage and force them to reveal a banked card instead.",
+    "Artist":"Oscar Mar"
   },
   {
-    "Card Name": "Repurposed Hardware",
+    "Name": "Repurposed Hardware",
     "Parallel": "Marcolian",
     "Rarity": "Uncommon",
     "Type": "Effect",
-    "Function": "Put any card on the field into the Enemy's bank."
+    "Function": "Put any card on the field into the Enemy's bank.",
+    "Artist": "Oscar Mar"
   },
   {
-    "Card Name": "Strength of Mars",
+    "Name": "Strength of Mars",
     "Parallel": "Marcolian",
     "Rarity": "Uncommon",
     "Type": "Upgrade",
-    "Function": "Whenever you are dealt damage, give this unit +1/+1."
+    "Function": "Whenever you are dealt damage, give this unit +1/+1.",
+    "Artist": "Oscar Mar"
   },
   {
-    "Card Name": "Solar Grenade",
+    "Name": "Solar Grenade",
     "Parallel": "Marcolian",
     "Rarity": "Rare",
     "Type": "Effect",
-    "Function": "Deal 2 damage to 2 random enemy units. If this card is Banked, deal 2 damage to a random enemy unit."
+    "Function": "Deal 2 damage to 2 random enemy units. If this card is Banked, deal 2 damage to a random enemy unit.",
+    "Artist": "Oscar Mar"
   },
   {
-    "Card Name": "Enthalpy's Grasp",
+    "Name": "Enthalpy's Grasp",
     "Parallel": "Shroud",
     "Rarity": "Uncommon",
     "Type": "Effect",
-    "Function": "Deal 2 damage to all Enemy Units. They cannot attack on the Enemy Player's next turn."
+    "Function": "Deal 2 damage to all Enemy Units. They cannot attack on the Enemy Player's next turn.",
+    "Artist":"Oscar Mar"
   },
   {
-    "Card Name": "Entropy's Reach",
+    "Name": "Entropy's Reach",
     "Parallel": "Shroud",
     "Rarity": "Uncommon",
     "Type": "Effect",
-    "Function": "Pick and create a copy of a revealed card from the Enemy Player's Bank. It goes into your hand."
+    "Function": "Pick and create a copy of a revealed card from the Enemy Player's Bank. It goes into your hand.",
+    "Artist": "Oscar Mar"
   },
   {
-    "Card Name": "Life Stream",
+    "Name": "Life Stream",
     "Parallel": "Universal",
     "Rarity": "Common",
     "Type": "Relic",
-    "Function": "At the start of each player's turn, that player heals any target for 1."
+    "Function": "At the start of each player's turn, that player heals any target for 1.",
+    "Artist": "Oscar Mar"
   },
   {
-    "Card Name": "Life Well",
+    "Name": "Life Well",
     "Parallel": "Universal",
     "Rarity": "Uncommon",
     "Type": "Relic",
-    "Function": "At the start of each Player's Turn, heal that Player and all their Units for 1."
+    "Function": "At the start of each Player's Turn, heal that Player and all their Units for 1.",
+    "Artist": "Oscar Mar"
   },
   {
-    "Card Name": "Unstable Drone",
+    "Name": "Unstable Drone",
     "Parallel": "Marcolian",
     "Rarity": "Common",
     "Type": "Unit",
-    "Function": "Defender. When this unit dies you deal damage equal to its attack to an enemy unit."
+    "Function": "Defender. When this unit dies you deal damage equal to its attack to an enemy unit.",
+    "Artist": "Oscar Mar"
+  },
+  {
+    "Name": "Warden",
+    "Parallel": "Marcolian",
+    "Rarity": "Uncommon",
+    "Type": "Upgrade",
+    "Function": "Whenever Upgraded Unit attacks, this Upgrade deals 1 damage to target Enemy Unit.",
+    "Artist": "Oscar Mar"
+  },
+  {
+    "Name": "Honored Steward",
+    "Parallel": "Shroud",
+    "Rarity": "Common",
+    "Type": "Unit",
+    "Function": "Muster: Banish target enemy unit. When this unit leaves play, return the banished unit to the field under its owner's control.",
+    "Artist": "Dhenzel Obeng"
+  },
+  {
+    "Name": "Lancer Tank",
+    "Parallel": "Marcolian",
+    "Rarity": "Legendary",
+    "Type": "Unit",
+    "Function": "Assault: Deal 4 Damage to your Opponent. When this Unit attacks, deal 4 damage to target Enemy Unit."
+  },
+  {
+    "Name": "Mantis Corsair",
+    "Parallel": "Universal",
+    "Description": "Swift & agile beyond belief, mercantile craft pray they do not fall victim to a Mantis.",
+    "Rarity": "Common",
+    "Type": "Unit",
+    "Function": "Muster: Deal 3 damage to your opponent.",
+    "Artist": "Oscar Cafaro"
+  },
+  {
+    "Name": "Hidden Vaults",
+    "Parallel": "Universal",
+    "Rarity": "",
+    "Type": "",
+    "Function": "",
+    "Artist": "Nacho Yagüe"
+  },
+  {
+    "Name": "Hydrolist Chamber",
+    "Parallel": "Kathari",
+    "Rarity": "Common",
+    "Type": "Relic",
+    "Function": "Activate: Waste target friendly unit to gain 1 energy. After you activate this ability for the second time in a turn, Waste this Relic.",
+    "Artist": "Nacho Yagüe"
+  },
+  {
+    "Name": "Void Crystal",
+    "Parallel": "Shroud",
+    "Rarity": "Uncommon",
+    "Type": "Relic",
+    "Function": "The first time a card is Banished during your turn, gain 1 energy.",
+    "Artist": "Oscar Mar"
+  },
+  {
+    "Name": "Supply Drop",
+    "Parallel": "Marcolian",
+    "Rarity": "Common",
+    "Type": "Effect",
+    "Function": "Assault: This Effect costs 1 energy instead. Draw a card.",
+    "Artist": "Oscar Cafaro"
+  },
+  {
+    "Name": "Singularity Steward",
+    "Parallel": "Shroud",
+    "Rarity": "Common",
+    "Type": "Unit",
+    "Function": "Whenever a unit is banished, give this Unit +1/+1",
+    "Artist": "Dhenzel Obeng"
+  },
+  {
+    "Name": "Doctor's Assistant",
+    "Parallel": "Earthen",
+    "Rarity": "Common",
+    "Type": "Unit",
+    "Function": "Muster: Reveal a card in your bank to heal a unit equal to the revealed card's cost",
+    "Artist": "Nacho Yagüe"
+  },
+  {
+    "Name": "Void-Touched Novice",
+    "Parallel": "Shroud",
+    "Rarity": "",
+    "Type": "",
+    "Description": "“Arise, my faithful warrior. It is not your time. Yet.” -Niamh, Wielder of Faith",
+    "Function": "",
+    "Artist": "Chris Bjerre"
+  },
+  {
+    "Name": "Primean Conduit",
+    "Parallel": "Earthen",
+    "Description": "The power to protect ones friends is amongst the highest honours of the Earthen. It is rarely wasted.",
+    "Rarity": "",
+    "Type": "",
+    "Function": "",
+    "Artist": "Sasha Vinogrdova"
+  },
+  {
+    "Name": "Rhetorician",
+    "Parallel": "Earthen",
+    "Description": "Even now they take from us. We can no longer sit back and do nothing!",
+    "Rarity": "",
+    "Type": "",
+    "Function": "",
+    "Artist": "Dhenzel Obeng"
+  },
+  {
+    "Name": "Trade Route Ambush",
+    "Parallel": "Universal",
+    "Description": "Most trading vessel captains learn the importance of hiring an escort sooner rather than later.",
+    "Rarity": "",
+    "Type": "",
+    "Function": "",
+    "Artist": "Oscar Cafaro"
+  },
+  {
+    "Name": "Iron Corps Helmet Collectible Card Back",
+    "Parallel": "Marcolian",
+    "Description": "Most trading vessel captains learn the importance of hiring an escort sooner rather than later.",
+    "Rarity": "Prime",
+    "Type": "Card Back",
+    "Function": "",
+    "Artist": "Dhenzel Obeng"
+  },
+  {
+    "Name": "Planetary Ambition Collectible Card Back",
+    "Parallel": "Marcolian",
+    "Description": "Most trading vessel captains learn the importance of hiring an escort sooner rather than later.",
+    "Rarity": "Prime",
+    "Type": "Card Back",
+    "Function": "",
+    "Artist": "Dhenzel Obeng"
+  },
+  {
+    "Name": "Seeing Red Collectible Card Back",
+    "Parallel": "Marcolian",
+    "Description": "Most trading vessel captains learn the importance of hiring an escort sooner rather than later.",
+    "Rarity": "Prime",
+    "Type": "Card Back",
+    "Function": "",
+    "Artist": "Dhenzel Obeng"
+  },
+  {
+    "Name": "Collapsing Star",
+    "Parallel": "Shroud",
+    "Description": "The very stars themselves bend to our master’s will, how do you dare to resist?",
+    "Rarity": "Legendary",
+    "Type": "",
+    "Function": "",
+    "Artist": "Oscar Mar",
+    "Editions":{
+      "Se" : "https://parallel.life/cards/Shr_CollapsingStar_Non_Lgn_Se_Img/",
+      "Pl" : "https://parallel.life/cards/Shr_CollapsingStar_Non_Lgn_Pl_Vid/"
+    }
+  },
+  {
+    "Parallel": "Uo",
+    "Editions": {
+      "Collectible_card": "https://parallel.life/cards/383"
+    },
+    "Name": "Fluid Dynamics Art Card",
+    "Rarity": "Prime",
+    "Description": "Stay Liquid.",
+    "Function": "",
+    "Type": "",
+    "Artist": "Oscar Mar"
+  },
+  {
+    "Parallel": "Unknown Origins",
+    "Editions": {
+      "Collectible_card": "https://parallel.life/cards/81/"
+    },
+    "Name": "Mev Stone Concept Art Card",
+    "Rarity": "Prime",
+    "Description": "Concept Art Card - Alpha Set - Unknown Origins: MEV Stone // Art by Oscar Mar // 2021",
+    "Function": "",
+    "Type": "",
+    "Artist": "Oscar Mar"
   }
 ]

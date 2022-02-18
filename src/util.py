@@ -1,71 +1,103 @@
 import random
-import re
+from Card import Card
+from Paragon import Paragon
+from Parallels import Parallels
 from fuzzywuzzy import fuzz
 
-card_name_index = "Card Name"
-card_url_index = "URL"
-parallel_index = "Parallel"
-
-# rarity indexes
-rarity_index = "Rarity"
-common_index = "common"
-uncommon_index = "uncommon"
-rare_index = "rare"
-legendary_index = "legendary"
-prime_index = "prime"
-
-type_index = "Type"
-function_index = "Function"
-
-paragon_name_index = "Paragon Name"
+paragon_name_index = "Name"
 paragon_parallel_index = "Parallel"
 paragon_passive_index = "Passive"
 paragon_active_index = "Active"
 
-def format_card(card):
-    name = f"Name: *{card[card_name_index]}*"
-    faction = f"Parallel: *{card[parallel_index]}*"
-    rarity = f"Rarity: *{card[rarity_index]}*"
-    card_type = f"Type: *{card[type_index]}*"
-    fn = f"Function: *{card[function_index]}*"
-    formatted = "\n".join([name, faction, rarity, card_type, fn])
+emoji_by_parallel = {
+    Parallels.Unknown : "",
+    Parallels.Augencore : ":color_augencore:", #":yellow_square:",
+    Parallels.Kathari : ":color_kathari:", #":large_blue_diamond:",
+    Parallels.Marcolian : ":color_marcolian:", #":red_circle:",
+    Parallels.Shroud : ":color_shroud:", #":purple_heart:",
+    Parallels.Earthen : ":color_earthen:", #":green_apple:",
+    Parallels.Universal : ":white_circle:", #":white_square_button:",
+}
+
+def format_card(card:Card):
+    name = ""
+    artist = ""
+    parallel = ""
+    rarity = ""
+    cardType = ""
+    fn = ""
+
+    if card.Name:
+        name = f"**{card.Name.upper()}**"
+
+    if card.Artist:
+        artist = f"(Art by {card.Artist})"
+
+    if card.Parallel:
+        parallel = emoji_by_parallel.get(card.Parallel, "")
+
+    if card.Rarity:
+        rarity = f"{card.Rarity.value.upper()} // "
+    
+    cardType = card.Type.value.upper()
+
+    if card.Function:
+        fn = f"*{card.Function}*"
+
+    formatted = f"{parallel} {name} {artist}\n"
+    formatted += f"{rarity}{cardType}\n"
+    formatted += f"{fn}"
+
     return formatted
 
-def format_paragon(paragon):
-    name = f"Name: *{paragon[paragon_name_index]}*"
-    faction = f"Parallel: *{paragon[paragon_parallel_index]}*"
-    passive = f"Passive: *{paragon[paragon_passive_index]}*"
-    active = f"Active: *{paragon[paragon_active_index]}*"
-    formatted = "\n".join([name, faction, passive, active])
+def format_paragon(paragon:Paragon):
+    name = ""
+    parallel = ""
+    passive = ""
+    active = ""
+    
+    if paragon.Name:
+        name = f"**{paragon.Name.upper()}**"
+    
+    if paragon.Parallel:
+        parallel = emoji_by_parallel.get(paragon.Parallel, "")
+
+    passive = f"Passive: *{paragon.Passive}*"
+    active = f"Active: *{paragon.Active}*"
+
+    formatted = f"{parallel} {name}\n"
+    formatted += f"{passive}\n{active}\n"
+
     return formatted
 
-def get_card_url(card):
-    url = card.get(card_url_index)
+def get_card_url(card:Card):
+    s = "Sorry, I don't have any URLs for this card."
+    if isinstance(card.Editions, dict) and len(card.Editions):
+        s = 'Editions :\n'
+        for k, v in card.Editions.items():
+            # e.g. Concept Art, First Edition, Special Edition, Masterpiece, etc.
+            s += f"  {k.value} :"
+            if isinstance(v, dict):
+                # e.g. 01, 02, Day, Night, etc.
+                s += '\n'
+                # wrapping links in < > cancels the embedded preview
+                s += '\n'.join({f"    {k2} : <{v2}>" for k2, v2 in v.items()})
+                s += '\n'
+            if isinstance(v, str):
+                s += f" <{v}>\n"
+    return s
+    
 
-    # we have an override URL defined
-    if url:
-        return url
-
-    # no override defined, construct the URL from the name
-    else:
-        hyphenated = hyphenate_card_name(card[card_name_index].lower())
-        card_name = re.sub("[^a-zA-Z0-9-]", "", hyphenated)
-        return f"https://parallel.life/cards/{card_name}"
-
-def hyphenate_card_name(name):
-    words = name.split()
-    words_hyphenated = "-".join(words)
-    return words_hyphenated
-
-def fuzzy_find(name, set, name_index):
+def fuzzy_find(name, set, attribute):
     best_score = 0
     best_item = None
 
-    print("fuzzy_find: Searching", len(set), f"items for one named '{name}'")
+    print("fuzzy_find: Searching", len(set), f"items for one with '{attribute}' like '{name}'")
 
     for key in set.keys():
         item = set[key]
-        item_name = item[name_index]
+        item_name = getattr(item, attribute)
+
         score = fuzz.token_sort_ratio(name.lower(), item_name)
 
         # this is the closest match we've seen so far
@@ -74,23 +106,40 @@ def fuzzy_find(name, set, name_index):
             best_item = item
 
     if best_item:
-        print(f"fuzzy_find: The highest scoring item was '{best_item[name_index]}' with a score of {best_score}")
+        print(f"fuzzy_find: The highest scoring item was '{getattr(best_item, attribute)}' with a score of {best_score}")
 
     # note, this can be None if there was no good match
     return best_item
 
 def find_card(name, cards):
-    return fuzzy_find(name, cards, card_name_index)
+    return fuzzy_find(name, cards, 'Name')
 
 def find_paragon(name, paragons):
-    return fuzzy_find(name, paragons, paragon_name_index)
+    return fuzzy_find(name, paragons, 'Name')
+
+def find_artist(name, artists):
+    artist = None
+    print(f"find_artist: Looking for '{name}' among '{artists}'")
+    scores = [(a, fuzz.token_sort_ratio(name.lower(), a)) for a in artists]
+    match, score = max(scores, key=lambda x: x[1])
+    print(f"find_artist: The closest artist name was '{match}' with a score of {score}")
+
+    if score >= 40:
+        artist = match
+    else:
+        print("find_artist: Could not find a match with high enough confidence.")
+
+    return artist
 
 def format_random_card_from_list(card_list):
-    return format_card(random.choice(list(card_list.values())))
+    if isinstance(card_list, list):
+        return format_card(random.choice(card_list))
+    else:
+        return format_card(random.choice(list(card_list.values())))
 
 def format_multiple_paragons(paragons):
     accumulator = []
     for name, data in paragons.items():
         accumulator.append(format_paragon(data))
-    formatted = "\n\n".join(accumulator)
+    formatted = "\n".join(accumulator)
     return formatted
