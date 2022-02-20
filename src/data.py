@@ -1,104 +1,139 @@
+import os
+from imp import load_dynamic
 import json
 import util
+from Card import Card
+from CardTypes import CardTypes
+from CardRarities import CardRarities
+from Paragon import Paragon
+from Parallels import Parallels
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # load the cards
 
-# parallels
-earthen_cards = {}
-kathari_cards = {}
-marcolian_cards = {}
-augencore_cards = {}
-shroud_cards = {}
-universal_cards = {}
-
-# types
-units = {}
-relics = {}
-effects = {}
-upgrades = {}
-
-# rarities
-rarities = {
-  "common": {},
-  "uncommon": {},
-  "rare": {},
-  "legendary": {},
-  "prime": {},
-}
-
 # general
-card_names = []
 cards = {}
 
-with open('resources/cards.json', encoding='utf8') as cards_file:
+## indexes
+cards_by_parallel = {
+    Parallels.Augencore : {},
+    Parallels.Earthen : {},
+    Parallels.Kathari : {},
+    Parallels.Marcolian : {},
+    Parallels.Shroud : {},
+    Parallels.Universal : {},
+    Parallels.UnknownOrigins : {},
+}
+
+cards_by_type = {
+    CardTypes.Effect : {},
+    CardTypes.Keyframing : {},
+    CardTypes.Relic : {},
+    CardTypes.Unit : {},
+    CardTypes.Upgrade : {},
+}
+
+cards_by_rarity = {
+    CardRarities.Common: {},
+    CardRarities.Uncommon: {},
+    CardRarities.Rare: {},
+    CardRarities.Legendary: {},
+    CardRarities.Prime: {},
+}
+
+cards_by_artist = {}
+
+cards_by_keyword = {
+    # parallels
+    "augencore" : cards_by_parallel[Parallels.Augencore],
+    "earthen" : cards_by_parallel[Parallels.Earthen],
+    "kathari": cards_by_parallel[Parallels.Kathari],
+    "marcolian": cards_by_parallel[Parallels.Marcolian],
+    "shroud" : cards_by_parallel[Parallels.Shroud],
+    "universal" : cards_by_parallel[Parallels.Universal],
+    "unknownorigins" : cards_by_parallel[Parallels.UnknownOrigins],
+    # types
+    "effect" : cards_by_type[CardTypes.Effect],
+    "keyframing": cards_by_type[CardTypes.Keyframing],
+    "relic" : cards_by_type[CardTypes.Relic],
+    "unit" : cards_by_type[CardTypes.Unit],
+    "upgrade" : cards_by_type[CardTypes.Upgrade],
+    # rarities
+    "common" : cards_by_rarity[CardRarities.Common],
+    "uncommon" : cards_by_rarity[CardRarities.Uncommon],
+    "rare" : cards_by_rarity[CardRarities.Rare],
+    "legendary" : cards_by_rarity[CardRarities.Legendary],
+    "prime" : cards_by_rarity[CardRarities.Prime],
+}
+
+CARD_DATA_FILE = os.getenv("CARD_DATA_FILE")
+if not CARD_DATA_FILE:
+    CARD_DATA_FILE = 'resources/cards.json'
+
+with open(CARD_DATA_FILE, encoding='utf8') as cards_file:
     data = json.load(cards_file)
-    for card in data:
-        card_name = card[util.card_name_index].lower()
+    for card_data in data:
+        card = Card(card_data)
+
+        card_name = card.Name.lower()
         # add to generic card lists
-        card_names.append(card_name)
         cards[card_name] = card
 
-        # add to parallel specific list
-        if card["Parallel"] == "Kathari":
-            kathari_cards[card_name] = card
-        elif card["Parallel"] == "Marcolian":
-            marcolian_cards[card_name] = card
-        elif card["Parallel"] == "Earthen":
-            earthen_cards[card_name] = card
-        elif card["Parallel"] == "Shroud":
-            shroud_cards[card_name] = card
-        elif card["Parallel"] == "Augencore":
-            augencore_cards[card_name] = card
-        elif card["Parallel"] == "Universal":
-            universal_cards[card_name] = card
-        else:
-            print(f"Card '{card[util.card_name_index]}' with Parallel '{card[util.parallel_index]}' didn't match any Parallel")
+        # add to parallel lists
+        parallel_set = cards_by_parallel.get(card.Parallel)
+        if not parallel_set == None:
+            parallel_set[card_name] = card
 
         # add to card type list
-        if card["Type"] == "Relic":
-            relics[card_name] = card
-        elif card["Type"] == "Unit":
-            units[card_name] = card
-        elif card["Type"] == "Effect":
-            effects[card_name] = card
-        elif card["Type"] == "Upgrade":
-            upgrades[card_name] = card
-        else:
-            print(f"Card '{card[util.card_name_index]}' with Type '{card[util.type_index]}' didn't match any card type")
-
+        type_set = cards_by_type.get(card.Type)
+        if not type_set == None:
+            type_set[card_name] = card
+            
         # add to card rarity list
-        rarity_set = rarities.get(card[util.rarity_index].lower())
+        rarity_set = cards_by_rarity.get(card.Rarity)
         if not rarity_set == None:
-          rarity_set[card_name] = card
+            rarity_set[card_name] = card
+
+        # add card to artist list
+        artist = card.Artist
+        if cards_by_artist.get(artist):
+            cards_by_artist[artist].append(card)
         else:
-          print(f"Card '{card[util.card_name_index]}' with Rarity '{card[util.rarity_index]}' didn't match any card rarity")
+            cards_by_artist[artist] = [card]
 
 # load the paragons
 
-earthen_paragons = {}
-kathari_paragons = {}
-marcolian_paragons = {}
-augencore_paragons = {}
-shroud_paragons = {}
-paragon_names = []
+paragons_by_parallel = {
+    Parallels.Augencore: {},
+    Parallels.Earthen: {},
+    Parallels.Kathari: {},
+    Parallels.Marcolian: {},
+    Parallels.Shroud: {},
+}
+
+paragons_by_keyword = {
+    "augencore": paragons_by_parallel[Parallels.Augencore],
+    "earthen": paragons_by_parallel[Parallels.Earthen],
+    "kathari": paragons_by_parallel[Parallels.Kathari],
+    "marcolian": paragons_by_parallel[Parallels.Marcolian],
+    "shroud": paragons_by_parallel[Parallels.Shroud],
+}
+
 paragons = {}
 
 with open('resources/paragons.json', ) as paragons_file:
     data = json.load(paragons_file)
-    for paragon in data:
-        paragon_name = paragon[util.paragon_name_index].lower()
-        paragon_names.append(paragon_name)
-        paragons[paragon_name] = paragon
-        if paragon["Parallel"] == "Kathari":
-            kathari_paragons[paragon_name] = paragon
-        elif paragon["Parallel"] == "Marcolian":
-            marcolian_paragons[paragon_name] = paragon
-        elif paragon["Parallel"] == "Earthen":
-            earthen_paragons[paragon_name] = paragon
-        elif paragon["Parallel"] == "Shroud":
-            shroud_paragons[paragon_name] = paragon
-        elif paragon["Parallel"] == "Augencore":
-            augencore_paragons[paragon_name] = paragon
-        else:
-            print(f"Paragon % didn't match any Parallel", paragon)
+    for paragon_data in data:
+        paragon = Paragon(paragon_data)
+        name = paragon.Name.lower()
+
+        # add to master paragon set
+        paragons[name] = paragon
+
+        # add to parallel lists
+        paragon_set = paragons_by_parallel.get(paragon.Parallel)
+        if not paragon_set == None:
+            paragon_set[name] = paragon
 

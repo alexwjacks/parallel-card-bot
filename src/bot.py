@@ -1,5 +1,6 @@
 # bot.py
 import os
+from tkinter import N
 from data import *
 import util
 from discord.ext import commands
@@ -23,7 +24,7 @@ async def on_ready():
         print(f'{bot.user} is connected to the following guild:\n'
               f'{guild.name}(id: {guild.id})')
 
-@bot.command(name="card", help="Look up a card by name.")
+@bot.command(name="card", help="Look up a card by name")
 async def card(ctx, *args):
     name = ' '.join(args).strip()
 
@@ -39,7 +40,18 @@ async def card(ctx, *args):
 
     await ctx.send(response)
 
-@bot.command(name="paragon", help="Look up a Paragon by name.")
+@bot.command(name="credits", help="New phone, who dis?")
+async def give_credit(ctx, *args):
+    credits = f"Lazergician made this bot all by himself with no help whatsoever,"
+    credits += f" especially not by Deuce or that lazybones JERisBRISK."
+    await ctx.send(credits)
+
+@bot.command(name="disclaimer", help="Things are subject to change")
+async def disclaim(ctx, *args):
+    disclaimer = "Certain things spoken about in chat by team members are subject to change as this game and drops are in progress and in active development."
+    await ctx.send(disclaimer)
+
+@bot.command(name="paragon", help="Look up a Paragon by name")
 async def paragon(ctx, *args):
     name = ' '.join(args).strip()
 
@@ -55,7 +67,7 @@ async def paragon(ctx, *args):
 
     await ctx.send(response)
 
-@bot.command(name="site", help="Get a link to the card on the parallel website.")
+@bot.command(name="site", help="Get a link to the card")
 async def site(ctx, *args):
     name = ' '.join(args).strip()
 
@@ -72,64 +84,51 @@ async def site(ctx, *args):
 
     await ctx.send(response)
 
-@bot.command(name="random-card", help="Get a random card. Optionally specify a Parallel, Card Type, or Rarity.")
+@bot.command(name="random-card", help="Optionally provide a Parallel, Card Type, or Rarity")
 async def random_card(ctx, *args):
     response = ""
 
     if len(args) == 0:
         response = util.format_random_card_from_list(cards)
     else:
-        keyword = args[0].strip().lower()
-        switch = {
-            # parallels
-            "kathari": kathari_cards,
-            "marcolian": marcolian_cards,
-            "earthen" : earthen_cards,
-            "shroud" : shroud_cards,
-            "augencore" : augencore_cards,
-            "universal" : universal_cards,
-            # types
-            "unit" : units,
-            "effect" : effects,
-            "relic" : relics,
-            "upgrade" : upgrades,
-            # rarities
-            "common" : rarities[util.common_index],
-            "uncommon" : rarities[util.uncommon_index],            
-            "rare" : rarities[util.rare_index],            
-            "legendary" : rarities[util.legendary_index],            
-            "prime" : rarities[util.prime_index],            
-        }
+        keyword = ' '.join(args).strip()
 
-        list = switch.get(keyword, None)
+        list = cards_by_keyword.get(keyword.lower(), None)
+
+        if not list:
+            artistName = util.find_artist(keyword, cards_by_artist.keys())
+            if artistName:
+                list = cards_by_artist.get(artistName, None)
 
         if list:
             response = util.format_random_card_from_list(list)
         else:
-            response = "\nUsage: `!random-card [keyword]` where the optional `keyword` is a Parallel, Card Type, or Rarity:"
-            response += "\n  Parallels: `" + ' '.join(PARALLELS) + '`'
-            response += "\n  Card Types: `" + ' '.join(TYPES) + '`'
-            response += "\n  Card Rarities: `" + ' '.join(rarities.keys()) + '`'
+            response = "\nUsage: `!random-card [keyword]` where the optional `keyword` is one of:"
+            artists = filter(None, cards_by_artist.keys())
+            response += "\n  Artists:" + '  '.join([f"`{a}`" for a in artists])
+            response += "\n  Parallels: `" + ' '.join([p.name.lower() for p in Parallels if p.name.lower() != 'unknown']) + '`'
+            response += "\n  Card Types: `" + ' '.join([t.name.lower() for t in CardTypes if t.name.lower() != 'unknown']) + '`'
+            response += "\n  Card Rarities: `" + ' '.join([r.name.lower() for r in CardRarities if r.name.lower() != 'unknown']) + '`'
 
     await ctx.send(response)
 
-@bot.command(name="list-paragons", help="List the Paragons for a given Parallel.")
-async def list_paragons(ctx, arg):
-    faction = arg.lower()
-    response = ""
-    if faction not in PARALLELS:
-        response = f"Sorry, I don't know the faction {arg}"
+@bot.command(name="list-paragons", help="List a Parallel's Paragons")
+async def list_paragons(ctx, *args):
+    if len(args) == 0:
+        # list all the paragons without their details
+        list = sorted([f"{util.emoji_by_parallel.get(v.Parallel)} {v.Name}" for k, v in paragons.items()])
+        print(list)
+        response = '\n'.join(list)
     else:
-        if faction == "kathari":
-            response = util.format_multiple_paragons(kathari_paragons)
-        elif faction == "marcolian":
-            response = util.format_multiple_paragons(marcolian_paragons)
-        elif faction == "earthen":
-            response = util.format_multiple_paragons(earthen_paragons)
-        elif faction == "shroud":
-            response = util.format_multiple_paragons(shroud_paragons)
-        elif faction == "augencore":
-            response = util.format_multiple_paragons(augencore_paragons)
+        keyword = args[0].strip().lower()
+        list = paragons_by_keyword.get(keyword, None)
+
+        if list:
+            response = util.format_multiple_paragons(list)
+        else:
+            response = "\nUsage: `!list-paragons [keyword]` where the optional `paragon` is a Parallel:"
+            response += "\n  Parallels: `" + ' '.join([p.name.lower() for p in Parallels if p.name.lower() != 'unknown']) + '`'
+    
     await ctx.send(response)
 
 @bot.event

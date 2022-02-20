@@ -59,9 +59,10 @@ print("Cards", len(cards_data))
 # print(i)
 # exit()
 
-card_name_index = 'Card Name'
+card_name_index = 'Name'
 function_index = 'Function'
 type_index = 'Type'
+artist_index = 'Artist'
 
 for sr in spider_data:
   name = sr[card_name_index]
@@ -69,11 +70,14 @@ for sr in spider_data:
   if o:
     sr[function_index] = o[0].get(function_index, "")
     sr[type_index] = o[0].get(type_index, "")
+    sr[artist_index] = o[0].get(artist_index, "")
     print(f"Adding {function_index} '{sr[function_index]}' to {name}")
     print(f"Adding {type_index} '{sr[type_index]}' to {name}")
+    print(f"Adding {artist_index} '{sr[artist_index]}' to {name}")
   else:
-    sr[function_index] = "(coming soon)"
-    sr[type_index] = "(coming soon)"
+    sr[function_index] = ""
+    sr[type_index] = ""
+    sr[artist_index] = ""
 
 print (f"Writing output to {outputFile}")
 
