@@ -66,10 +66,10 @@ async def test_for_echo(ctx, *args):
 
     await ctx.send(message)
 
-async def give_credit(ctx, *args):
-    credits = f"Lazergician made this bot all by himself with no help whatsoever,"
-    credits += f" especially not by Deuce or that lazybones JERisBRISK."
-    await ctx.send(credits)
+@bot.command(name="source", help="Visit the sausage factory")
+async def source(ctx, *args):
+    message = f"If you really want to see how the sausage is made, visit <https://github.com/alexwjacks/parallel-card-bot>"
+    await ctx.send(message)
 
 @bot.command(name="paragon", help="Look up a Paragon by name")
 async def paragon(ctx, *args):
