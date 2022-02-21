@@ -6,6 +6,7 @@ import util
 from discord.ext import commands
 from time import strftime
 from dotenv import load_dotenv
+import discord
 
 load_dotenv()
 
@@ -50,6 +51,26 @@ async def give_credit(ctx, *args):
 async def disclaim(ctx, *args):
     disclaimer = "Certain things spoken about in chat by team members are subject to change as this game and drops are in progress and in active development."
     await ctx.send(disclaimer)
+
+@bot.command(name="echo", help="Test for echo")
+async def give_credit(ctx, *args):
+    required_role = discord.utils.get(ctx.guild.roles, name='Mad Scientist')
+    authorized = required_role in ctx.author.roles
+    if not authorized:
+        print(f"echo: {ctx.author} attempted to use this command without the required role: {required_role}")
+        return
+
+    message = ' '.join(args)
+    if not message:
+        message = "You gotta give me something to work with, buddy."
+
+    await ctx.send(message)
+
+async def give_credit(ctx, *args):
+    credits = f"Lazergician made this bot all by himself with no help whatsoever,"
+    credits += f" especially not by Deuce or that lazybones JERisBRISK."
+    await ctx.send(credits)
+
 
 @bot.command(name="paragon", help="Look up a Paragon by name")
 async def paragon(ctx, *args):
