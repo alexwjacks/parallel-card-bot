@@ -53,7 +53,7 @@ async def disclaim(ctx, *args):
     await ctx.send(disclaimer)
 
 @bot.command(name="echo", help="Test for echo")
-async def give_credit(ctx, *args):
+async def test_for_echo(ctx, *args):
     required_role = discord.utils.get(ctx.guild.roles, name='Mad Scientist')
     authorized = required_role in ctx.author.roles
     if not authorized:
@@ -70,7 +70,6 @@ async def give_credit(ctx, *args):
     credits = f"Lazergician made this bot all by himself with no help whatsoever,"
     credits += f" especially not by Deuce or that lazybones JERisBRISK."
     await ctx.send(credits)
-
 
 @bot.command(name="paragon", help="Look up a Paragon by name")
 async def paragon(ctx, *args):
