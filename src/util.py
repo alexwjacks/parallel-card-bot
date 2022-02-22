@@ -11,12 +11,12 @@ paragon_active_index = "Active"
 
 emoji_by_parallel = {
     Parallels.Unknown : "",
-    Parallels.Augencore : ":color_augencore:", #":yellow_square:",
-    Parallels.Kathari : ":color_kathari:", #":large_blue_diamond:",
-    Parallels.Marcolian : ":color_marcolian:", #":red_circle:",
-    Parallels.Shroud : ":color_shroud:", #":purple_heart:",
-    Parallels.Earthen : ":color_earthen:", #":green_apple:",
-    Parallels.Universal : ":white_circle:", #":white_square_button:",
+    Parallels.Augencore : "<:color_augencore:850233294971994123>",
+    Parallels.Kathari : "<:color_kathari:850233295362850816>",
+    Parallels.Marcolian : "<:color_marcolian:850233295501262899>",
+    Parallels.Shroud : "<:color_shroud:850233295501000704>",
+    Parallels.Earthen : "<:color_earthen:850233295371632670>",
+    Parallels.Universal : ":white_circle:",
 }
 
 def format_card(card:Card):
